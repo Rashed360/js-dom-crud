@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/css/all.css">
+    <script src="style/bootstrap.bundle.min.js" defer></script>
+    <script src="script.js" defer></script>
+    <title>JavaScript DOM-CRUD</title>
+</head>
+<body>
+    <div class="container mt-3">
+        <h2><i class="fa fa-layer-group"></i> JavaScript DOM-CRUD Operations</h2>
+        <p class="lead float-start">Click <i class="fa fa-plus"></i> to Add data:</p>
+        <div class="btn-group float-end mb-3">
+            <button id="reset" class="btn btn-sm btn-danger" type="button"><i class="fa fa-times"></i> Reset Table</button>
+            <button class="btn btn-sm btn-success" type="button" data-bs-toggle="modal" data-bs-target="#mdl"><i class="fa fa-plus"></i> Add Data</button>
+        </div>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Sl.No.</th>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Status</th>
+              <th>Operation</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+        <p class="small">
+            &copy; Hello World
+            <i class="fa fa-edit"></i>
+            <i class="fa fa-trash-alt"></i>
+        </p>
+    </div>
+
+    <div class="modal" id="mdl">
+    <div class="modal-dialog modal-md">
+    <div class="modal-content">
+        <div class="modal-body">
+            <div class="mb-3 mt-3">
+                <input type="text" class="form-control" id="name" placeholder="Enter Name">
+            </div>
+            <select class="form-select" id="status" aria-label="select" required>
+                <option value="">-Select-</option>
+                <option value="0">Offline</option>
+                <option value="1">Online</option>
+                <option value="2">Busy</option>
+            </select>
+        </div>
+        <div class="modal-footer">
+            <button id="add" type="button" class="btn btn-info" data-bs-dismiss="modal">Add</button>
+            <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Cancel</button>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
